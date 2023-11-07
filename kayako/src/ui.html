@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>Earthdata Pub Kayako Module</title>
+  <script>
+    const getToken = () => {
+      const token = window.localStorage.getItem('auth-token');
+      return `Bearer ${token}`;
+    }
+    const callApi = (operation, params) =>
+      new Promise((resolve) => {
+        fetch('/api/module/kayako_module', {
+          method: 'POST',
+          headers: {
+            'Authorization': getToken(),
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ operation, ...params })
+        })
+        .then(r => r.json())
+        .then(data => {
+          resolve(data);
+        });
+      });
+    const getAllEDPubTickets = () => {
+      callApi('getAllEDPubTickets', {})
+      .then(data => {
+        const main = document.getElementById('output');
+        while (main.firstChild) {
+          main.removeChild(main.firstChild);
+        }
+        data.tickets.ticket.forEach(ticket => {
+          const ticketDiv = document.createElement('div');
+          const ticketTitle = document.createElement('h4');
+          const ticketBody = document.createElement('div');
+          const ticketId = document.createElement('h5');
+          const ticketLast = document.createElement('h5');
+          ticketBody.className = 'ticket-body';
+          ticketTitle.innerText = `${ticket.subject}`;
+          ticketId.innerText = `ID: ${ticket.displayid}`;
+          ticketLast.innerText = `Last Activity: ${new Date(parseInt(ticket.lastactivity)).toString()}`;
+          ticketBody.appendChild(ticketId);
+          ticketBody.appendChild(ticketLast);
+          ticketDiv.appendChild(ticketTitle);
+          ticketDiv.appendChild(ticketBody);
+          main.appendChild(ticketDiv);
+        });
+      });
+    }
+  </script>
+</head>
+<style>
+.ticket-body {
+  padding-left: 10px;
+}
+</style>
+<body>
+  <div>
+    <h1>Kayako Module</h1>
+    <button onclick="getAllEDPubTickets()">Show All EDPub Tickets</button>
+    <div id="output"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+#Ignore all installed node modules and package-locks
+node_modules/
+dist/
+package-lock.json
+
+#Ignore npm debug logs
+npm-debug.log
+
+#Ignore all dynamic and generated components
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate*
+tfplan
+
+#Ignore installation artifacts
+*.zip
+*.tgz
+*.gz
+*.tar
+
+# Ignore configuration files from Jinja templates
+meditor/deployment/config/*
+meditor/pre-deployment/config/*
+
+# Don't ignore README
+!meditor/deployment/config/README.md
+!meditor/pre-deployment/config/README.md
+
+# Ignore user env.json files
+meditor/deployment/env.json
+meditor/pre-deployment/env.json

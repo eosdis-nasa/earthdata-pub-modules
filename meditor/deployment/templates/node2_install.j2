@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# General Software installation
+sudo yum update
+sudo yum upgrade -y
+sudo yum clean all
+sudo yum install python3 -y
+sudo pip3 install boto3
+sudo yum install -y yum-utils
+
+sudo amazon-linux-extras install docker -y
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+sudo ln -s /usr/local/bin/aws /usr/bin/aws
+
+# Sanity check that docker daemon is running
+sudo systemctl start docker
+
+# mEditor specific scripts
+aws ecr get-login-password --region {{ REGION }} | sudo docker login --username AWS --password-stdin {{ REGISTRY }}
+
+sudo docker pull {{ REGISTRY }}/meditor/meditor_proxy:{{ PROXY_VERSION }}
+sudo docker pull {{ REGISTRY }}/meditor/meditor_ui:{{ UI_VERSION }}
+sudo docker pull {{ REGISTRY }}/meditor/meditor_server:{{ SERVER_VERSION }}
+sudo docker pull {{ REGISTRY }}/meditor/meditor_notifier:{{ NOTIFIER_VERSION }}
+sudo docker pull {{ REGISTRY }}/meditor/meditor_docs:{{ DOCS_VERSION }}
+sudo docker pull {{ REGISTRY }}/cmr/cmr-meditor-subscriber:{{ CMR_SUBSCRIBER_VERSION }}
+sudo docker pull {{ REGISTRY }}/nats-streaming:{{ NATS_VERSION }}
+sudo docker pull {{ REGISTRY }}/certified/mongo:{{ DATABASE_VERSION }}
+sudo docker pull {{ REGISTRY }}/portainer/agent:{{ AGENT_VERSION }}
+sudo docker pull {{ REGISTRY }}/portainer/portainer:{{ MONITOR_VERSION }}
+sudo docker pull {{ REGISTRY }}/edpub/meditor_subscriber:{{ EDPUB_VERSION }}
+sudo docker pull {{ REGISTRY }}/edpub/edpub-overview-subscriber:{{ EDPUB_OVERVIEW_SUBSCRIBER_VERSION }}
+sudo docker pull {{ REGISTRY }}/cmr/cmr-meditor-subscriber:{{ CMR_SUBSCRIBER_VERSION }}
+
+# Logout for security reasons
+sudo docker logout {{ REGISTRY }}
+
+# Add centos as docker user, and if centos is not default user, add ssm-user as docker user
+sudo usermod -aG docker ssm-user
+
+
+# Create data directories
+mkdir /root/nats_volume
+
+# Volumes attachment
+mkfs -t ext4 /dev/xvdc
+mount /dev/xvdc /root/nats_volume

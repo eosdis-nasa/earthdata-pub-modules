@@ -1,0 +1,17 @@
+{
+  "name": "kayako",
+  "version": "1.0.0",
+  "description": "Earthdata Pub Module for Kayako integration",
+  "main": "./src/kayako.js",
+  "files": [
+    "/src"
+  ],
+  "scripts": {
+    "build": "bash scripts/build.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  }
+}
