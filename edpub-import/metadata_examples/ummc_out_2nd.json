@@ -1,0 +1,374 @@
+{
+    "MetadataLanguage": "English",
+    "MetadataSpecification": [
+        {
+            "URL": "https://cdn.earthdata.nasa.gov/umm/collection/v1.17.0",
+            "Name": "UMM-C",
+            "Version": "1.17.0"
+        }
+    ],
+    "MetadataDates": [
+        {
+            "Date": "2022-10-06T15:56:53.777Z",
+            "Type": "CREATE"
+        },
+        {
+            "Date": "2022-10-06T16:46:41.953Z",
+            "Type": "UPDATE"
+        }
+    ],
+    "TemporalExtents": [
+        {
+            "RangeDateTimes": [
+                {
+                    "BeginningDateTime": "2022-09-01T00:00:00Z",
+                    "EndingDateTime": "2022-09-30T00:00:00Z"
+                }
+            ],
+            "TemporalCoverageNotes": "Temporal Notes"
+        }
+    ],
+    "SpatialExtent": {
+        "SpatialCoverageType": "HORIZONTAL_VERTICAL",
+        "HorizontalSpatialDomain": {
+            "Geometry": {
+                "CoordinateSystem": "CARTESIAN",
+                "BoundingRectangles": {
+                    "WestBoundingCoordinate": "-90",
+                    "NorthBoundingCoordinate": "50",
+                    "EastBoundingCoordinate": "-75",
+                    "SouthBoundingCoordinate": "40"
+                }
+            }
+        },
+        "VerticalSpatialDomains": {
+            "Maximum Depth": "90 m",
+            "Minimum Depth": "0 m"
+        },
+        "GeneralInfo": {
+            "SpatialCoverageDescription": "Great Lakes Region",
+            "DataFileSpatialCoverage": "great lakes basin divided into 1 km squares",
+            "DataFileSpatialResolution": "1 km gridded squares.",
+            "DataFileSpatialCoverageNotes": "Spatial Notes"
+        }
+    },
+    "EntryTitle": "GLCFS",
+    "DOI": {
+        "DOI": "adsga r"
+    },
+    "Abstract": "Great Lakes Coastal Forecasting System Model Output",
+    "DataCenters": [
+        {
+            "Roles": [
+                "ORIGINATOR"
+            ],
+            "ShortName": "ORNL DAAC",
+            "ContactPersons": [
+                {
+                    "FirstName": "Kent",
+                    "LastName": "Data Producer",
+                    "ContactInformation": {
+                        "ContactInstructions": "Data Producer",
+                        "ContactMechanisms": [
+                            {
+                                "Type": "Email",
+                                "Value": "example@example.com"
+                            },
+                            {
+                                "Type": "ORCID",
+                                "Value": "BLARG"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "AdditionalAttributes": [
+        {
+            "Name": "edpub_request_id",
+            "Description": "Request ID from EDPub",
+            "DataType": "STRING",
+            "Value": "5d575b31-80a2-4092-a174-c57c7b2d8ff5"
+        },
+        {
+            "Name": "FormType",
+            "Description": "Integer indicating to which form these responses refer",
+            "DataType": "INT",
+            "Value": 2
+        },
+        {
+            "Name": "data_producers_for_data_citation",
+            "Description": "Please list the people or groups that were involved in the creation of this data product in the order that they should be credited in the data product citation.",
+            "DataType": "STRING",
+            "Value": "Kent Data Producer"
+        },
+        {
+            "Name": "data_producers_for_data_citation",
+            "Description": "Please list the people or groups that were involved in the creation of this data product in the order that they should be credited in the data product citation.",
+            "DataType": "STRING",
+            "Value": "Timothy Hunter"
+        },
+        {
+            "Name": "data_producers_for_data_citation",
+            "Description": "Please list the people or groups that were involved in the creation of this data product in the order that they should be credited in the data product citation.",
+            "DataType": "STRING",
+            "Value": "Joeseph Smith"
+        },
+        {
+            "Name": "data_producers_for_data_citation",
+            "Description": "Please list the people or groups that were involved in the creation of this data product in the order that they should be credited in the data product citation.",
+            "DataType": "STRING",
+            "Value": "Gregory Lang"
+        },
+        {
+            "Name": "science_value_description",
+            "Description": "What is the science value of this data product?",
+            "DataType": "STRING",
+            "Value": "It's Sciency!"
+        },
+        {
+            "Name": "data_accession_reason_description",
+            "Description": "Why are you requesting to have this data product archived and distributed at the DAAC?",
+            "DataType": "STRING",
+            "Value": "I want it to be archived."
+        },
+        {
+            "Name": "data_accession_approval_dependencies_radios",
+            "Description": "Do you have any dependencies related to this data product being approved to be published at the DAAC?",
+            "DataType": "STRING",
+            "Value": "Yes"
+        },
+        {
+            "Name": "data_product_documentation_url",
+            "Description": "Are there any existing documents that you would like to have included in the review of your data product? If \"Yes\", please provide URLs to the documents.",
+            "DataType": "STRING",
+            "Value": "https://prod_documentation.com"
+        },
+        {
+            "Name": "data_product_restrictions_public",
+            "Description": "Can this data product be publicly released in compliance with NASA's Open Data Policy?",
+            "DataType": "STRING",
+            "Value": "Not sure"
+        },
+        {
+            "Name": "data_product_restrictions_explanation",
+            "Description": "If No or Not sure, please provide a brief explanation.",
+            "DataType": "STRING",
+            "Value": "restriction explanation"
+        },
+        {
+            "Name": "funding_nasa",
+            "Description": "Did NASA help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_noaa",
+            "Description": "Did NOAA help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_nsf",
+            "Description": "Did NSF help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_usgs",
+            "Description": "Did USGS help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_university",
+            "Description": "Did a University help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_other",
+            "Description": "Did another organization help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": false
+        },
+        {
+            "Name": "funding_organization_other",
+            "Description": "Name(s) of University/other organization(s) that funded the creation of this data product",
+            "DataType": "STRING",
+            "Value": "UofM"
+        },
+        {
+            "Name": "funding_program_name",
+            "Description": "Under what program or program element within the funding organization was this data product created?",
+            "DataType": "STRING",
+            "Value": "NASA"
+        },
+        {
+            "Name": "funding_grant_number",
+            "Description": "If available, please provide the grant number for the funding that supported the creation of this data product.",
+            "DataType": "STRING",
+            "Value": "NNX08AZ90A"
+        },
+        {
+            "Name": "data_format_ascii",
+            "Description": "Was data provided in ASCII format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_geotiff",
+            "Description": "Was data provided in GeoTIFF format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_hdf5",
+            "Description": "Was data provided in HDF5 format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_hdf_eos",
+            "Description": "Was data provided in HDF-EOS 5 format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_ogc_kml",
+            "Description": "Was data provided in OGC KML format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_netcdf_4",
+            "Description": "Was data provided in NetCDF-4 format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_netcdf_classic",
+            "Description": "Was data provided in NetCDF Classic format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_other",
+            "Description": "Was data provided in 'smoke signals' format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_product_number_of_files",
+            "Description": "What is the estimated or actual total number of files in this data product?",
+            "DataType": "INT",
+            "Value": 123
+        },
+        {
+            "Name": "data_product_volume_amount",
+            "Description": "What is the estimated or actual total volume of this data product?",
+            "DataType": "FLOAT",
+            "Value": 12.0,
+            "ParameterUnitsOfMeasure": "GB"
+        },
+        {
+            "Name": "data_file_compression_answer",
+            "Description": "Is internal compression applied to the data files in this data product?",
+            "DataType": "BOOLEAN",
+            "Value": false
+        },
+        {
+            "Name": "data_product_status",
+            "Description": "After this data product has been published at the DAAC, will you continue to collect or create new data to extend the time series?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_delivery_frequency",
+            "Description": "What is the anticipated frequency of additional data deliveries to the DAAC?",
+            "DataType": "STRING",
+            "Value": "Daily"
+        },
+        {
+            "Name": "data_production_latency_units",
+            "Description": "What is the expected time difference between the latest data observation reference time and the delivery of that data to the DAAC?",
+            "DataType": "STRING",
+            "Value": "24 hours or less"
+        },
+        {
+            "Name": "file_temporal_coverage_answer",
+            "Description": "On average, how much time is covered by an individual data file?",
+            "DataType": "FLOAT",
+            "Value": 24.0,
+            "ParameterUnitsOfMeasure": "Hour(s)"
+        },
+        {
+            "Name": "value_temporal_resolution_answer",
+            "Description": "On average, what is the temporal resolution of an individual data value within the data files?",
+            "DataType": "FLOAT",
+            "Value": 6.0,
+            "ParameterUnitsOfMeasure": "Second(s)"
+        },
+        {
+            "Name": "data_processing_level",
+            "Description": "What is the NASA Data Processing Level of this data product?",
+            "DataType": "STRING",
+            "Value": "Other/Unsure"
+        },
+        {
+            "Name": "data_processing_other_info",
+            "Description": "If Data Processing Level is 'Other/Unsure'...",
+            "DataType": "STRING",
+            "Value": "TECH INFO NOTES"
+        },
+        {
+            "Name": "variables_text",
+            "Description": "What are the primary variables represented in this data product?",
+            "DataType": "STRING",
+            "Value": "water level, wind speed, wind direction, water temperature"
+        },
+        {
+            "Name": "data_product_type_model",
+            "Description": "Are data within this data product model output?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "model_data_product",
+            "Description": "What is the name and version of the model used to produce this data product?",
+            "DataType": "STRING",
+            "Value": "GLCFS 1"
+        },
+        {
+            "Name": "data_product_type_observational",
+            "Description": "Are data within this data product observational?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "platform_instrument",
+            "Description": "What platform(s) and instrument(s) were used to collect the data within this data product?",
+            "DataType": "STRING",
+            "Value": "Platform and Instrument Info"
+        },
+        {
+            "Name": "example_file_url",
+            "Description": "Please provide a URL to a sample file(s).",
+            "DataType": "STRING",
+            "Value": "http://localhost:3000/forms/id/19025579-99ca-4344-8610-704dae626343?requestId=78bf5792-f44e-4c23-b755-b07ecc1de0f3"
+        },
+        {
+            "Name": "browse_images_provided",
+            "Description": "Will browse images representing the data be provided as part of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "browse_images_other",
+            "Description": "Additional information about browse images",
+            "DataType": "STRING",
+            "Value": "IMAGES!!!!!!"
+        }
+    ]
+}
