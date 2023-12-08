@@ -1,0 +1,26 @@
+bin
+.classpath
+.settings
+.settings/
+__pycache__
+build
+
+*~
+target
+MANIFEST.MF
+.idea
+*.iml
+RemoteSystemsTempFiles
+
+# system files
+.project
+
+# svn files
+.svn
+svnignore
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*

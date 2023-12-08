@@ -1,0 +1,30 @@
+version: '3'
+services:
+    edpub-import:
+        build: .
+        ports:
+            - "5009:5009"
+        environment:
+            - keyfile=/keys/localhost.key
+            - certfile=/keys/localhost.crt
+        volumes:
+            - ./config:/usr/local/scripts/lib/daacome
+            - ./import:/import
+            - ./log:/log
+        networks:
+          - daacingest
+
+    db:
+        image: mariadb
+        environment:
+            MYSQL_ROOT_PASSWORD: daacome
+        ports: 
+            - 3306:3306
+        volumes:
+            - ./db:/docker-entrypoint-initdb.d/:ro
+        networks:
+          - daacingest
+
+networks:
+    daacingest:
+        driver: bridge

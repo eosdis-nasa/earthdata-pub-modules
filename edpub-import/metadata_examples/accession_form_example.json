@@ -1,0 +1,228 @@
+{
+    "MetadataLanguage": "English",
+    "MetadataSpecification": [
+        {
+            "URL": "https://cdn.earthdata.nasa.gov/umm/collection/v1.17.0",
+            "Name": "UMM-C",
+            "Version": "1.17.0"
+        }
+    ],
+    "MetadataDates": [
+        {
+            "Date": "2022-10-06T15:56:53.777Z",
+            "Type": "CREATE"
+        },
+        {
+            "Date": "2022-10-06T16:08:42.865Z",
+            "Type": "UPDATE"
+        }
+    ],
+    "TemporalExtents": [
+        {
+            "RangeDateTimes": [
+                {
+                    "BeginningDateTime": "2022-09-01T00:00:00Z",
+                    "EndingDateTime": "2022-09-30T00:00:00Z"
+                }
+            ]
+        }
+    ],
+    "SpatialExtent": {},
+    "EntryTitle": "GLCFS",
+    "DOI": {
+        "DOI": "adsga r"
+    },
+    "Abstract": "Great Lakes Coastal Forecasting System Model Output",
+    "DataCenters": [
+        {
+            "Roles": [
+                "ORIGINATOR"
+            ],
+            "ShortName": "ORNL DAAC",
+            "ContactPersons": [
+                {
+                    "FirstName": "Kent",
+                    "LastName": "Data Producer",
+                    "ContactInformation": {
+                        "ContactInstructions": "Data Producer",
+                        "ContactMechanisms": [
+                            {
+                                "Type": "Email",
+                                "Value": "example@example.com"
+                            },
+                            {
+                                "Type": "ORCID",
+                                "Value": "BLARG"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "AdditionalAttributes": [
+        {
+            "Name": "edpub_request_id",
+            "Description": "Request ID from EDPub",
+            "DataType": "STRING",
+            "Value": "5d575b31-80a2-4092-a174-c57c7b2d8ff5"
+        },
+        {
+            "Name": "FormType",
+            "Description": "Integer indicating to which form these responses refer",
+            "DataType": "INT",
+            "Value": 1
+        },
+        {
+            "Name": "science_value_description",
+            "Description": "What is the science value of this data product?",
+            "DataType": "STRING",
+            "Value": "It's Sciency!"
+        },
+        {
+            "Name": "data_accession_reason_description",
+            "Description": "Why are you requesting to have this data product archived and distributed at the DAAC?",
+            "DataType": "STRING",
+            "Value": "I want it to be archived."
+        },
+        {
+            "Name": "data_accession_approval_dependencies_radios",
+            "Description": "Do you have any dependencies related to this data product being approved to be published at the DAAC?",
+            "DataType": "STRING",
+            "Value": "Yes"
+        },
+        {
+            "Name": "data_product_documentation_url",
+            "Description": "Are there any existing documents that you would like to have included in the review of your data product? If \"Yes\", please provide URLs to the documents.",
+            "DataType": "STRING",
+            "Value": "https://prod_documentation.com"
+        },
+        {
+            "Name": "data_product_restrictions_public",
+            "Description": "Can this data product be publicly released in compliance with NASA's Open Data Policy?",
+            "DataType": "STRING",
+            "Value": "Not sure"
+        },
+        {
+            "Name": "data_product_restrictions_explanation",
+            "Description": "If No or Not sure, please provide a brief explanation.",
+            "DataType": "STRING",
+            "Value": "restriction explanation"
+        },
+        {
+            "Name": "funding_nasa",
+            "Description": "Did NASA help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_noaa",
+            "Description": "Did NOAA help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_nsf",
+            "Description": "Did NSF help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_usgs",
+            "Description": "Did USGS help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_university",
+            "Description": "Did a University help fund the creation of this data product?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "funding_organization_other",
+            "Description": "Name(s) of University/other organization(s) that funded the creation of this data product",
+            "DataType": "STRING",
+            "Value": "UofM"
+        },
+        {
+            "Name": "funding_program_name",
+            "Description": "Under what program or program element within the funding organization was this data product created?",
+            "DataType": "STRING",
+            "Value": "NASA"
+        },
+        {
+            "Name": "data_format_ascii",
+            "Description": "Was data provided in ASCII format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_geotiff",
+            "Description": "Was data provided in GeoTIFF format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_hdf5",
+            "Description": "Was data provided in HDF5 format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_hdf_eos",
+            "Description": "Was data provided in HDF-EOS 5 format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_ogc_kml",
+            "Description": "Was data provided in OGC KML format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_netcdf_4",
+            "Description": "Was data provided in NetCDF-4 format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_netcdf_classic",
+            "Description": "Was data provided in NetCDF Classic format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_format_other",
+            "Description": "Was data provided in 'smoke signals' format?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_product_volume_amount",
+            "Description": "What is the estimated or actual total volume of this data product?",
+            "DataType": "FLOAT",
+            "Value": 12.0,
+            "ParameterUnitsOfMeasure": "GB"
+        },
+        {
+            "Name": "data_product_status",
+            "Description": "After this data product has been published at the DAAC, will you continue to collect or create new data to extend the time series?",
+            "DataType": "BOOLEAN",
+            "Value": true
+        },
+        {
+            "Name": "data_delivery_frequency",
+            "Description": "What is the anticipated frequency of additional data deliveries to the DAAC?",
+            "DataType": "STRING",
+            "Value": "Daily"
+        },
+        {
+            "Name": "example_file_url",
+            "Description": "Please provide a URL to a sample file(s).",
+            "DataType": "STRING",
+            "Value": "http://localhost:3000/forms/id/19025579-99ca-4344-8610-704dae626343?requestId=78bf5792-f44e-4c23-b755-b07ecc1de0f3"
+        }
+    ]
+}
