@@ -54,7 +54,7 @@ for that functionality as well.
 
 If you want to submit your own contributions, follow these steps:
 
-- Fork the EDPub Forms repo
+- Fork the EDPub repo
 - Create a new branch from the branch you'd like to contribute to
 - If an issue doesn't already exist, submit one (see above)
 - [Create a pull request](https://github.com/eosdis-nasa/earthdata-pub-modules/pulls)
@@ -68,7 +68,7 @@ will be requested
 
 ### Git flow
 
-EDPub will follow the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
+EDPub will follow the [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow).
 When possible, feature branches should be tied directly to a Jira ticket.
 
 ### Commit messages
@@ -76,7 +76,7 @@ When possible, feature branches should be tied directly to a Jira ticket.
 Always write a clear log message for your commits. One-line messages are fine for
 small changes, but bigger changes should look like this:
 
-```
+```bash
 $ git commit -m "A brief summary of the commit
 >
 > A paragraph describing what changed and its impact."
