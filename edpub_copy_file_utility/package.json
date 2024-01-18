@@ -1,0 +1,28 @@
+{
+  "name": "edpub_copy_file_utility",
+  "version": "1.0.0",
+  "description": "DAAC managed utiltity for copying files from EDPub to DAAC internal buckets.",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "cd dist && for f in * ; do ([ -d \"$f\" ] && cd $f && zip ../$f.zip *) ; done ; rm -rf src",
+    "build": "rm -rf dist && esbuild ./src/* --entry-names=src/index --bundle --minify --sourcemap --platform=node --target=node18.14.1 --outdir=dist",
+    "lint": "npx eslint src",
+    "lint-fix": "npx eslint --fix src"
+  },
+  "author": "Earthdata Pub Development Team",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.377.0",
+    "s3-sync-client": "4.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.17",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0"
+  }
+}
