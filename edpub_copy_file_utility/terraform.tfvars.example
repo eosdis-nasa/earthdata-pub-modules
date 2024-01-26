@@ -1,0 +1,11 @@
+# Required
+prefix="fakeStack-Name"
+daac_bucket="fakeDAACBucket-private"
+edpub_bucket="fakeEDPubBucket-upload"
+edpub_account_id="000000000000"
+daac_prefix_in_edpub="/daac/test/"
+
+# Optional - Defaults are define
+region="us-west-2" // This can be changed; however, modifications to the lambda source may be necessary.
+enable_s3_trigger=true // Change to false to utilize scan feature instead of s3 object trigger default.
+scan_cron_value="rate(1 day)" // This AWS cron expression can be updated to any rate or cron value. This value is only utilized if enable_s3_trigger=false
