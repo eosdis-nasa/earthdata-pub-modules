@@ -11,3 +11,6 @@
 
 ### Meditor
 * Module for integrating a Meditor instance into EDPub
+
+### Metadata Mapper
+* Script to map EDPub form response to a json metadata record
