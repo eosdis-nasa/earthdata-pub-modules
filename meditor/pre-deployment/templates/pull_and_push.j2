@@ -1,8 +1,0 @@
-#!/bin/bash
-{% for image, tag in images.items() %}
-{{ lower_repository_login_command }}
-docker pull {{ lower_repository }}/{{ image }}:{{ tag }}
-docker tag {{ lower_repository }}/{{ image }}:{{ tag }} {{ upper_repository }}/{{ image }}:{{ tag }}
-{{ upper_repository_login_command }}
-docker push {{ upper_repository }}/{{ image }}:{{ tag }}
-{% endfor %}
