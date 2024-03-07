@@ -5,33 +5,40 @@ const daacMap = {
     }
 };
 
-async function pushMetadataToDaac(metadata, daacId){
-    console.log(metadata)
+async function pushMetadataToDaac(metadata, daacId, submissionId){
     const url = `https://${daacMap[daacId].endpoint}/${daacMap[daacId].authToken}`;
+    metadata.AdditionalAttributes.push({
+        Name: "edpub_request_id",
+        Description: "Request ID from EDPub",
+        DataType: "STRING",
+        Value: submissionId
+    })
+    metadata.AdditionalAttributes.push({
+        Name: "FormType",
+        Description: "Integer indicating to which form these responses refer",
+        DataType: "INT",
+        Value: 2
+    })
     try{
         const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(metadata),
+            body: JSON.stringify({...metadata}),
         });
         const responseJson = await response.json();
         if(responseJson.status === 'Import Successful'){
             return 'Metadata successfully';
         }
-        console.log(response);
-        console.log(responseJson);
         return 'Metadata failed';
     }catch(err){
-        console.log(err);
         return 'endpoint failed';
     }
 }
 
 async function execute({submission}) {
-    console.log(submission);
-  const resp = await pushMetadataToDaac(submission.metadata, submission.daac_id);
+  const resp = await pushMetadataToDaac(submission.metadata, submission.daac_id, submission.id);
   console.log(resp);
 }
 
