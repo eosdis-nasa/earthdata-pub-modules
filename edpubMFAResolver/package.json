@@ -1,0 +1,14 @@
+{
+  "name": "edpubmfaresolver",
+  "version": "1.0.0",
+  "description": "Script used to resolve MFA switch from required to optional with user MFA set as active if already setup.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.596.0"
+  }
+}
