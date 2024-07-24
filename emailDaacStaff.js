@@ -1,6 +1,6 @@
-const MessageUtil = require('message-util');
-const DatabaseUtil = require('database-util');
-
+/* 
+Example action for emailing ORNL DAAC Staff at the specified point in the workflow using a custom template
+*/
 const getCustomEmailDaacTemplate = (params, envUrl) => {
     const text = `Hello ${params.user.name},\n\nThe submission ${params.eventMessage.submission_name} has reached the email DAAC step of the ${params.eventMessage.workflow_name}.`;
     const html = `
@@ -35,11 +35,17 @@ const getCustomEmailDaacTemplate = (params, envUrl) => {
   };
 
 
-async function execute({eventMessage}) {
+async function execute({ submission, DatabaseUtil, MessageUtil }) {
+    let users = await DatabaseUtil.user.findAll({ group_id:'89816689-5375-4c81-a30c-bf6ed12d30fb', role_id:'a5b4947a-67d2-434e-9889-59c2fad39676', requested_fields: ['id', 'name', 'email'] });
 
-    let users = await DatabaseUtil.user.findAll({group_id:'89816689-5375-4c81-a30c-bf6ed12d30fb', role_id:'a5b4947a-67d2-434e-9889-59c2fad39676'});
+    emailProps = {
+      submission_id: submission.id,
+      submission_name: submission.name,
+      workflow_name: submission.workflow_name,
+      daac_name: submission.daac_name,
+    };
 
-    MessageUtil.message-util.sendEmail(users, eventMessage, getCustomEmailDaacTemplate);
+    MessageUtil.sendEmail(users, emailProps, getCustomEmailDaacTemplate);
     
 }
 
