@@ -45,7 +45,7 @@ async function execute({ submission, DatabaseUtil, MessageUtil }) {
       daac_name: submission.daac_name,
     };
 
-    MessageUtil.sendEmail(users, emailProps, getCustomEmailDaacTemplate);
+    await MessageUtil.sendEmail(users, emailProps, getCustomEmailDaacTemplate);
     
 }
 
