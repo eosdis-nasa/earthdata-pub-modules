@@ -47,8 +47,9 @@ async function pushMetadataToDaac(metadata, daacId, submissionId) {
     return 's3 upload success';
 
   } catch (err) {
-    console.error("ORNL S3 upload failed:", err);
-    return 's3 upload failed';
+    const msg = `ORNL S3 upload failed: ${err}`;
+    console.error(msg);
+    throw new Error(msg);
   }
 }
 
